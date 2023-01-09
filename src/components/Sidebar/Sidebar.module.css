@@ -1,0 +1,11 @@
+.sidebar {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    padding: 22px;
+    margin-top: 10px;
+}
+
+.logo {
+    cursor: pointer;
+}

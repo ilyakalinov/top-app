@@ -1,0 +1,151 @@
+.product {
+    display: grid;
+    grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(40% - 40px) [middle] 50px [pricestart] auto [priceend] 20px [creditstart] auto [creditend] 40px [ratestart] auto [end];
+    margin-bottom: 30px;
+}
+
+.logoPoduct {
+    grid-column: start / logoend;
+    grid-row: 1 / span 2;
+}
+
+.titleProduct,
+.tagsProduct {
+    grid-column: titlestart / middle;
+}
+.tagProduct {
+    margin-top: 5px;
+}
+.priceProduct,
+.priceTitle {
+    grid-column: pricestart / priceend;
+}
+
+.creditProduct,
+.creditTitle {
+    grid-column: creditstart / creditend;
+}
+
+.ratingProduct,
+.ratingTitle {
+    grid-column: ratestart / end;
+}
+
+.hr,
+.descriptionProduct,
+.actions {
+    grid-column: start / end;
+}
+
+.featuresProduct {
+    grid-column: start / middle;
+}
+
+.advantagesBlockProduct {
+    grid-column: middle / end;
+}
+
+.logoPoduct img {
+    border-radius: 5px;
+}
+
+.titleProduct {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    align-self: center;
+}
+
+.priceProduct,
+.creditProduct {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    align-self: center;
+}
+
+.month {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.discoutProduct {
+    margin-left: 5px;
+}
+.ratingProduct {
+    align-self: flex-end;
+}
+.ratingTitle a:hover {
+    color: var(--primary);
+}
+
+.priceTitle,
+.ratingTitle,
+.creditTitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.descriptionProduct {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.rewiewBtn {
+    margin-right: 20px;
+}
+
+.advantagesTitle,
+.disadvantagesTitle {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.advantages {
+    border-left: 2px solid #1dc37e;
+    padding-left: 15px;
+}
+
+.disadvantages {
+    border-left: 2px solid var(--red);
+    padding-left: 15px;
+    margin-top: 20px;
+}
+
+.characteristics {
+    display: grid;
+    gap: 10px;
+    align-items: baseline;
+    grid-template-columns: auto 1fr auto;
+    padding-right: 60px;
+}
+
+.cName {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.cDots {
+    border-bottom: 1px dashed var(--gray-light);
+    margin-bottom: 12px;
+}
+
+.review {
+    margin-top: -30px;
+    transition: 0.2s all;
+}
+
+.closed {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0;
+}
+
+.opened {
+    max-width: auto;
+}
+/* todo адаптив */
