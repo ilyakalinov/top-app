@@ -1,6 +1,6 @@
 .product {
     display: grid;
-    grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(40% - 40px) [middle] 50px [pricestart] auto [priceend] 20px [creditstart] auto [creditend] 40px [ratestart] auto [end];
+    grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(40% - 40px) [middle] 50px [pricestart] auto [priceend] 10px [creditstart] auto [creditend] 10px [ratestart] auto [end];
     margin-bottom: 30px;
 }
 

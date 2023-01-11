@@ -13,13 +13,14 @@ import { API } from '@/helpers/api';
 import cn from 'classnames';
 import { useEffect } from 'react';
 
-export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps): JSX.Element => {
+export const ReviewForm = ({ productId, isReviewOpened, className, ...props }: ReviewFormProps): JSX.Element => {
     const {
         control,
         formState: { errors },
         register,
         handleSubmit,
         reset,
+        clearErrors,
     } = useForm<ReviewInterface>();
 
     const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -39,6 +40,10 @@ export const ReviewForm = ({ productId, className, ...props }: ReviewFormProps):
         setTimeout(() => setIsSuccess(false), 6000);
         setTimeout(() => setError(''), 6000);
     };
+
+    useEffect(() => {
+        if (!isReviewOpened) clearErrors();
+    }, [isReviewOpened]);
 
     return (
         <>

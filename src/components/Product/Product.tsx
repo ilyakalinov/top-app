@@ -154,7 +154,10 @@ export const Product = motion(
                             {!!reviews?.length && <Divider />}
                         </div>
                     ))}
-                    <ReviewForm productId={_id} />
+                    <ReviewForm
+                        productId={_id}
+                        isReviewOpened={isReviewOpened}
+                    />
                 </Card>
             </div>
         );
