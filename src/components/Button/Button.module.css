@@ -26,7 +26,6 @@
 }
 
 .ghost:hover {
-    color: var(--black);
     background-color: var(--gray-light);
 }
 

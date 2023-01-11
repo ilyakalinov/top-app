@@ -1,6 +1,5 @@
 import styles from './Layout.module.css';
 import Sidebar from '@/components/Sidebar';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { FunctionComponent, useRef } from 'react';
 import { AppContextProvider, IAppContext } from '@/context/app.context';
@@ -39,7 +38,6 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
                 }}>
                 Сразу к содержанию
             </a>
-            <Header className={styles.header} />
             <Sidebar className={styles.sidebar} />
             {/* Содержимое 
                     layout */}

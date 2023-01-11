@@ -1,12 +1,17 @@
 import styles from './Review.module.css';
 import cn from 'classnames';
-import { ReviewProps } from './Review.props';
 import UserIcon from './UserIcon.svg';
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
 import { Rating } from '@/components/Rating/Rating';
 import { forwardRef, ForwardedRef } from 'react';
 import { motion } from 'framer-motion';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ReviewModel } from '@/interfaces/product.interface';
+
+export interface ReviewProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    review: ReviewModel;
+}
 
 export const Review = motion(
     forwardRef(({ review, className, ...props }: ReviewProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {

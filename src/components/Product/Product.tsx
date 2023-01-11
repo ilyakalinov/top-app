@@ -1,6 +1,5 @@
 import styles from './Product.module.css';
 import cn from 'classnames';
-import { ProductProps } from './Product.props';
 import { devOfNum, priceRu } from '@/helpers/helpers';
 import Card from '@/components/Card';
 import Rating from '@/components/Rating';
@@ -11,6 +10,12 @@ import { useRef, useState, ForwardedRef, forwardRef } from 'react';
 import Review from '@/components/Review';
 import ReviewForm from '@/components/ReviewForm';
 import { motion } from 'framer-motion';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+import { ProductModel } from '@/interfaces/product.interface';
+
+export interface ProductProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    product: ProductModel;
+}
 
 export const Product = motion(
     forwardRef(({ product, className }: ProductProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {

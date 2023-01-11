@@ -1,6 +1,11 @@
 import styles from './Advantages.module.css';
-import { AdvantagesProps } from './Advantages.props';
 import ChackIcon from './ChackIcon.svg';
+import { TopPageAdvantage } from '@/interfaces/page.interface';
+import { DetailedHTMLProps, HTMLAttributes } from 'react';
+
+export interface AdvantagesProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+    advantages: TopPageAdvantage[];
+}
 
 export const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => {
     return (
